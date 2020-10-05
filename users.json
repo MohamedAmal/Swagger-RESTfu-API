@@ -1,0 +1,44 @@
+{
+    "user1": {
+        "name": "string1",
+        "password": "string1",
+        "profession": "string1",
+        "id": 1
+    },
+    "user2": {
+        "name": "string",
+        "password": "string",
+        "profession": "string",
+        "id": 2
+    },
+    "user4": {
+        "name": "string",
+        "password": "string",
+        "profession": "string",
+        "id": 4
+    },
+    "user5": {
+        "name": "k",
+        "password": "kk",
+        "profession": "k",
+        "id": 5
+    },
+    "user6": {
+        "name": "qwe",
+        "password": "qwe",
+        "profession": "qwe",
+        "id": 6
+    },
+    "user7": {
+        "name": "adsfs",
+        "password": "stsdgsring",
+        "profession": "sgfdgdfstring",
+        "id": 7
+    },
+    "user8": {
+        "name": "k",
+        "password": "kk",
+        "profession": "k",
+        "id": 8
+    }
+}
