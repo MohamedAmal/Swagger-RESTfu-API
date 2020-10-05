@@ -28,7 +28,7 @@ app.get('/getUser/:id', function (req, res) {
     fs.readFile(__dirname + "/" + "users.json", 'utf8', function (err, data) {
         data = JSON.parse(data);
         var id = req.params.id
-        var user = data["user"+id]
+        var user = data["user" + id]
         res.end(JSON.stringify(user));
     });
 })
@@ -38,14 +38,14 @@ app.post('/addUser', function (req, res) {
     fs.readFile(__dirname + "/" + "users.json", 'utf8', async function (err, data) {
         data = JSON.parse(data);
         var arr = Object.keys(data)
-        var count = data[arr[arr.length -1]]["id"]+1
+        var count = data[arr[arr.length - 1]]["id"] + 1
         const user = {
             name: req.body.name,
             password: req.body.password,
             profession: req.body.profession,
             id: count
         };
-        console.log('this is count'+count)
+        console.log('this is count' + count)
         data[`user${count}`] = user;
         // data.push(user)
         console.log(data);
@@ -61,8 +61,8 @@ app.put('/updateUser/:id', function (req, res) {
     fs.readFile(__dirname + "/" + "users.json", 'utf8', async function (err, data) {
         data = JSON.parse(data);
         var id = req.params.id
-        data[`user${id}`]['name'] =  req.body.name
-        data[`user${id}`]['password'] =  req.body.password
+        data[`user${id}`]['name'] = req.body.name
+        data[`user${id}`]['password'] = req.body.password
         data[`user${id}`]['profession'] = req.body.profession
         data[`user${id}`]['id'] = id
 
@@ -90,9 +90,11 @@ app.delete('/deleteUser/:id', function (req, res) {
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-var server = app.listen(8000, function () {
-    var host = 'localhost'
-    var port = server.address().port
-    console.log("Example app listening at http://%s:%s", host, port)
-})
+// var server = app.listen(8000, function () {
+//     var host = 'localhost'
+//     var port = server.address().port
+//     console.log("Example app listening at http://%s:%s", host, port)
+// })
 
+const PORT = process.env.PORT || 8000
+app.listen(PORT, () => console.Console.log(`Listening on ${PORT}`))
