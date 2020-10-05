@@ -90,13 +90,13 @@ app.delete('/deleteUser/:id', function (req, res) {
 
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-var server = app.listen(8000, function () {
-    var host = 'localhost'
-    var port = server.address().port
-    console.log("Example app listening at http://%s:%s", host, port)
-})
+// var server = app.listen(8000, function () {
+//     var host = 'localhost'
+//     var port = server.address().port
+//     console.log("Example app listening at http://%s:%s", host, port)
+// })
 
-// const PORT = process.env.PORT || 8000 
-// // const PORT = 'http://localhost:8000/api-docs'
+const PORT = process.env.PORT || 8000 
+// const PORT = 'http://localhost:8000'
 
-// app.listen(PORT, () => console.log(`Listening on ${PORT}`))
+app.listen(PORT, () => console.log(`Listening on ${PORT}`))
