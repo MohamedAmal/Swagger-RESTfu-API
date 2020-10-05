@@ -96,5 +96,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 //     console.log("Example app listening at http://%s:%s", host, port)
 // })
 
-const PORT = process.env.PORT || 8000
+// const PORT = process.env.PORT || 8000
+const PORT = 'http://localhost:8000/api-docs'
+
 app.listen(PORT, () => console.log(`Listening on ${PORT}`))
