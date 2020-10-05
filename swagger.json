@@ -9,7 +9,7 @@
             "url": "https://opensource.org/licenses/MIT"
         }
     },
-    "host": "https://mohamedamal-users.herokuapp.com/",
+    "host": "mohamedamal-users.herokuapp.com",
     "basePath": "/",
     "tags": [
         {
