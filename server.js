@@ -88,7 +88,7 @@ app.delete('/deleteUser/:id', function (req, res) {
     });
 })
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // var server = app.listen(8000, function () {
 //     var host = 'localhost'
@@ -96,7 +96,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 //     console.log("Example app listening at http://%s:%s", host, port)
 // })
 
-const PORT = process.env.PORT || 8000 + "/api-docs'"
+const PORT = process.env.PORT || 8000 
 // const PORT = 'http://localhost:8000/api-docs'
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`))
