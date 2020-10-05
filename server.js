@@ -96,6 +96,12 @@ app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 //     console.log("Example app listening at http://%s:%s", host, port)
 // })
 
-const PORT = process.env.PORT || 3000 
-app.listen(PORT, () => console.log(`Listening on ${PORT}`))
+// const PORT = process.env.PORT || 3000 
+// app.listen(PORT, () => console.log(`Listening on ${PORT}`))
+
+var server = app.listen(process.env.PORT || 8000, function () {
+    var port = server.address().port;
+    console.log("App now running on port", port);
+  });
+
 // const PORT = 'http://localhost:8000'
